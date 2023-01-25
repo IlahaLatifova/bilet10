@@ -1,0 +1,48 @@
+﻿@model TeamUpdateVM
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description">
+                Basic form elements
+            </p>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="@Model.teamPost.FullName">FullName</label>
+                    <input class="form-control" asp-for="@Model.teamPost.FullName" value="@Model.teamGet.FullName" placeholder="Enter your FullName...">
+                    <span asp-validation-for="@Model.teamPost.FullName" style="color:darkred"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.teamPost.Prefession">Prefession</label>
+                    <input class="form-control" asp-for="@Model.teamPost.Prefession" value="@Model.teamGet.Prefession" placeholder="Add your Prefession...">
+                    <span asp-validation-for="@Model.teamPost.Prefession" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.teamPost.InstagramUrl">Instagram Account</label>
+                    <input class="form-control" asp-for="@Model.teamPost.InstagramUrl" value="@Model.teamGet.InstagramUrl" placeholder="Add your instagram account Url">
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.teamPost.FacebookUrl">FaceBook Account</label>
+                    <input class="form-control" asp-for="@Model.teamPost.FacebookUrl" value="@Model.teamGet.FacebookUrl" placeholder="Add your instagram account Url">
+
+                </div>
+                <input hidden"/>
+                <div class="form-group">
+                    <label asp-for="@Model.teamPost.TwitterUrl">Twitter Account</label>
+                    <input class="form-control" asp-for="@Model.teamPost.TwitterUrl" value="@Model.teamGet.TwitterUrl" placeholder="Add your instagram account Url">
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.teamPost.FormFile">Image</label>
+                    <input class="form-control" asp-for="@Model.teamPost.FormFile"></input>
+                    <img src="~/assets/img/@Model.teamGet.ImageUrl" />
+                    <span asp-validation-for="@Model.teamPost.FormFile" style="color:darkred"></span>
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light" asp-area="manage" asp-controller="TeamMembers" asp-action="Index">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

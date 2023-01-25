@@ -1,0 +1,46 @@
+﻿@model TeamPostVM
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description">
+                Basic form elements
+            </p>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="FullName">FullName</label>
+                    <input class="form-control" asp-for="FullName" placeholder="Enter your FullName...">
+                    <span asp-validation-for="FullName" style="color:darkred"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Prefession">Prefession</label>
+                    <input class="form-control" asp-for="Prefession" placeholder="Add your Prefession...">
+                    <span asp-validation-for="Prefession" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="InstagramUrl">Instagram Account</label>
+                    <input class="form-control" asp-for="InstagramUrl" placeholder="Add your instagram account Url">
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="FacebookUrl">FaceBook Account</label>
+                    <input class="form-control" asp-for="FacebookUrl" placeholder="Add your instagram account Url">
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="TwitterUrl">Twitter Account</label>
+                    <input class="form-control" asp-for="TwitterUrl" placeholder="Add your instagram account Url">
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="FormFile">Image</label>
+                    <input class="form-control" asp-for="FormFile"></input>
+                    <span asp-validation-for="FormFile" style="color:darkred"></span>
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light"asp-area="manage" asp-controller="TeamMembers" asp-action="Index">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
